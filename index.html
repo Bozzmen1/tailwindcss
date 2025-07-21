@@ -52,10 +52,38 @@
         </section>
         <hr>
 
-        <section class="min-h-screen bg-red-300 ">
-            <h2 class=" bg text-center text-3xl">We'll continue this at Monday, 21st of July...</h2>
+        <section class="min-h-screen bg-red-300 p-10 my-10">
+            <h2 class=" bg text-center text-3xl">Background, Border, Shadow, Effects, And Filters</h2>
             <blockquote class="text-center font-thin italic text-xs my-5"><q>Don't worry, be happy</q></blockquote>
+            <div class=" w-80 h-80 overflow-y-scroll bg-local bg-linear-to-b/increasing from-indigo-500 to-teal-400 bg-clip-text">
+                <div class="w-full h-full">
+                    <p class="p-5 text-transparent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a aspernatur dolorem eaque accusamus error vero voluptate quae, voluptatum aperiam. Vel maxime eveniet cupiditate ad rerum blanditiis consequuntur eum molestias? Quisquam illo mollitia voluptas quos ullam ex, hic repellendus magnam quis labore reprehenderit commodi facere maxime facilis odio repellat, quam id voluptates! Blanditiis reprehenderit, vero facere laborum excepturi laudantium nulla molestiae explicabo rem repellat fugiat exercitationem, veniam accusantium ab distinctio dignissimos eos ea! Rerum similique nesciunt nam et adipisci ipsa maiores nulla reiciendis, magnam numquam, dicta commodi voluptatibus officia voluptates quasi, odit harum reprehenderit quidem quis. Consequuntur laudantium sint officia.</p>
+                </div>
+            </div>
+            <div class="w-80 h-80 bg-slate-300 mx-auto my-10 bg-contain bg-center bg-no-repeat rounded-xl border-double border-4 border-slate-800 backdrop-blur ring-yellow-400 ring-10 outline-4 outline-offset-10 outline-red-600 shadow-2xl shadow-fuchsia-800 flex" style="background-image: url(./img/aurora.jpg);">
+                <div class="bg-white/20 w-20 h-20 mx-auto my-45 backdrop-blur-[1.2px] backdrop-invert-60 backdrop-grayscale"></div>
+            </div>
         </section>
+            <hr class="my-10">
         
+        <section>
+            <div class="flex justify-center">
+              <span class=>Light</span><input type="checkbox" id="check"><span>Dark</span>
+            </div>
+            <button type="button" class="w-20 h-10 px-5  mx-auto mt-10 block bg-white border-2 border-slate-600 rounded-full hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-pink-500 active:bg-blue-700">Click</button>
+            <div class="bg-white w-100 my-10 border-4 mx-auto rounded-xl border-slate-600 p-3 shadow-md shadow-slate-600 hover:bg-slate-600 group">
+                <h5 class="text-xl text-black font-bold group-hover:text-white mb-3">Card</h5>
+                <p class="group-hover:text-white selection:bg-yellow-400 selection:text-pink-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos quam ab recusandae voluptatibus fuga distinctio eum beatae tenetur aperiam laborum qui dolor similique mollitia, cumque veritatis reprehenderit tempora blanditiis!
+                </p>
+            </div>
+            <div class="border-2 border-gray-600 mx-5 mb-96 rounded-xl shadow-md">
+              <label for="name" class="mx-5 block"><span class=" block font-semibold after:content-['*'] after:text-pink-700 after:ml-0.5">Name</span>
+                <input type="email" id="name" placeholder="type smth..." class="block border-1 border-slate-500 px-2 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500 focus:outline-none
+                invalid:focus:border-pink-700 invalid:focus:ring-pink-700 invalid:text-pink-600 peer">
+                </input>
+                <p class="text-sm m-1 invisible peer-invalid:visible text-pink-600">Email tidak valid.</p>
+              </label>
+            </div>
+        </section>
     </body>
 </html>
