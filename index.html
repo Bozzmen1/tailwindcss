@@ -33,13 +33,13 @@
         
          if i'm using cdn from the video, my other code such as in line 71, 74, and much more will not be able to run :( so i'm using this, and my dark mode is now able to function just like it intended to do in the video, peace out!
 
-         And i'm wondering if i can apply dark mode only on that spesific section...
+         Dark mode on one spesific section applied! yey!
         */
         #toggle:checked ~ label div.toggle-circle {
             @apply translate-x-7;
         }
     </style>
-    <body class="dark:bg-slate-800 dark:text-slate-300">
+    <body>
         <section>
             <h1 class="text-6xl text-center my-10 mx-10 bg-gradient-to-r from-red-500 to-teal-300">I'm Learning <span class="bg-gradient-to-l via-pink-400 from-yellow-400 to-blue-700 bg-clip-text text-transparent">TailwindCSS</span></h1>
         </section>
@@ -77,18 +77,18 @@
                 <div class="bg-white/20 w-20 h-20 mx-auto my-45 backdrop-blur-[1.2px] backdrop-invert-60 backdrop-grayscale"></div>
             </div>
         </section>
-            <hr class="my-10">
+
         
-        <section>
+        <section id="mode" class="dark:bg-slate-700">
             <div class="flex justify-center">
-                <span class="mx-1">Light</span>
+                <span class="mx-1 dark:text-white">Light</span>
                 <input type="checkbox" id="toggle" class="hidden" />
                 <label for="toggle">
                     <div class="w-14 h-6 bg-slate-400 rounded-full flex items-center p-1 cursor-pointer">
                         <div class="w-5 h-5 bg-white rounded-full toggle-circle"></div>
                     </div>
               </label>
-              <span class="mx-1">Dark</span>
+              <span class="mx-1 dark:text-white">Dark</span>
             </div>
             <button type="button" class="w-20 h-10 px-5  mx-auto mt-10 block bg-white border-2 border-slate-600 rounded-full hover:bg-blue-600 hover:text-white focus:ring-2 focus:ring-pink-500 active:bg-blue-700 cursor-pointer dark:bg-yellow-300">Click</button>
 
@@ -107,13 +107,12 @@
             </div>
         </section>
         <script>
-            const checkbox = document.querySelector('#toggle');
-            const html = document.querySelector('html');
+  const checkbox = document.querySelector('#toggle');
+  const mode = document.getElementById('mode');
 
-            checkbox.addEventListener('click', function() 
-            {
-                checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
-            });
-        </script>
+  checkbox.addEventListener('click', function () {
+    checkbox.checked ? mode.classList.add('dark') : mode.classList.remove('dark');
+  });
+</script>
     </body>
 </html>
