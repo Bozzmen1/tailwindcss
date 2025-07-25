@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@
                         inter: ['Inter'],
                     },
                 },
+
             },
         };
     </script>
@@ -25,6 +26,19 @@
         h1 {
             border: 2px solid red;
         }
+        @theme {
+            --animate-wiggle: wiggle 2s ease-in-out infinite;
+            @keyframes wiggle {
+                0%,
+                100% {
+                transform: rotate(-90deg);
+                }
+                50% {
+                transform: rotate(90deg);
+                }
+            }
+        }
+        
 
         @import "tailwindcss";
         @custom-variant dark (&:where(.dark, .dark *));
@@ -79,7 +93,7 @@
         </section>
 
         
-        <section id="mode" class="dark:bg-slate-700">
+        <section id="mode" class="dark:bg-slate-700 py-10">
             <div class="flex justify-center">
                 <span class="mx-1 dark:text-white">Light</span>
                 <input type="checkbox" id="toggle" class="hidden" />
@@ -97,22 +111,97 @@
                 <p class="group-hover:text-white selection:bg-yellow-400 selection:text-pink-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dignissimos quam ab recusandae voluptatibus fuga distinctio eum beatae tenetur aperiam laborum qui dolor similique mollitia, cumque veritatis reprehenderit tempora blanditiis!
                 </p>
             </div>
-            <div class="border-2 border-gray-600 mx-5 mb-96 rounded-xl shadow-md">
-              <label for="name" class="mx-5 block"><span class=" block font-semibold after:content-['*'] after:text-pink-700 after:ml-0.5">Name</span>
+            <div class="border-2 border-gray-600 mx-5 mb-20 rounded-xl shadow-md dark:border-yellow-400">
+              <label for="name" class="mx-5 block dark:text-white"><span class=" block font-semibold after:content-['*'] after:text-pink-700 after:ml-0.5">Name</span>
                 <input type="email" id="name" placeholder="type smth..." class="block border-1 border-slate-500 px-2 rounded-md focus:ring-1 focus:ring-blue-500 focus:border-blue-500 focus:outline-none
-                invalid:focus:border-pink-700 invalid:focus:ring-pink-700 invalid:text-pink-600 peer">
+                invalid:focus:border-pink-700 invalid:focus:ring-pink-700 invalid:text-pink-600 peer
+                dark:bg-white dark:placeholder:text-slate-800">
                 </input>
                 <p class="text-sm m-1 invisible peer-invalid:visible text-pink-600">Email tidak valid.</p>
               </label>
             </div>
         </section>
         <script>
-  const checkbox = document.querySelector('#toggle');
-  const mode = document.getElementById('mode');
+            const checkbox = document.querySelector('#toggle');
+            const mode = document.getElementById('mode');
 
-  checkbox.addEventListener('click', function () {
-    checkbox.checked ? mode.classList.add('dark') : mode.classList.remove('dark');
-  });
-</script>
+            checkbox.addEventListener('click', function () {
+                checkbox.checked ? mode.classList.add('dark') : mode.classList.remove('dark');
+            });
+        </script>
+        <section class="bg-slate-400 w-full p-20 mb-20">
+            <p class="text-3xl text-center">Transform, Transition... T.. <span class="text-4xl bg-clip-text bg-linear-to-r/increasing from-red-600 to-purple-700 text-transparent">Animation!</span></p>
+
+            <div class="w-31 h-30 flex bg-purple-500 mx-auto mt-20">
+                <div class="bg-red-500 w-15 h-30 z-10 group">
+                    <div class=" w-30 h-30 bg-yellow-500 bg-mx-auto group-hover:translate-x-60 obox-hover:-translate-x-60 transition">
+                        <p class="text-lg text-center pt-10 ">Broken</p>
+                    </div>
+                </div>
+                <div class="bg-orange-500 w-15 h-30" id="obox"></div>
+                <!-- Question about obox-->
+            </div>
+            <div class="w-30 h-30 bg-yellow-400 bg-[url(img/aurora.jpg)] bg-contain mt-20 bg-center bg-no-repeat group inline-block">
+                <div class="w-30 h-30 origin-top-right bg-slate-500 group-hover:translate-x-30 transition inline-block"></div>
+            </div>
+            <div class="w-30 h-30 ml-50 bg-purple-500 inline-block animate-wiggle"> </div>   
+        </section>
+        <section class="mt-20 pb-10">
+            <div class="container border-1 border-slate-800 mx-auto p-5 h-50 relative shadow-xl">
+                <img src="img/boat.jpg" class="float-left bg-contain w-50 h-30 mr-5 w-min-50" />
+                <p class="text-base"><span class="font-bold text-slate-800">Float and position </span>consectetur adipisicing elit. Similique impedit quam id fugiat obcaecati minus, aperiam aspernatur vitae iusto exercitationem explicabo dolorem et blanditiis perspiciatis nam ex voluptas quasi, non architecto! Perspiciatis voluptate architecto explicabo ut? Sint ut exercitationem doloribus dolore necessitatibus. Facilis, totam. Harum officia quisquam exercitationem maxime praesentium?</p>
+                <div class="w-8 h-8 bg-black rounded-full absolute flex -top-5 -right-5 cursor-pointer">
+                    <p class="text-lg m-auto">❌</p>
+                </div>
+            </div>
+            <div class="w-10 h-10 border-1 border-black bottom-5 right-1/2 fixed flex">
+                <a href="#"class="text-2xl bg-green-500 m-auto">🔝</a>
+            </div>
+            <div class="container mx-auto border-1 border-pink-600 p-5 mt-20 columns-3">
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <img src="img/aurora.jpg" alt="aurora" class="mb-5"/>
+                <p class="text-4xl bg-slate-300 text-center">Colums</p>
+            </div>
+        </section>
+        <section class="mt-10 min-h-screen">
+            <div class="container bg-slate-100 mx-auto p-5 rounded-lg shadow-lg sm:h-80">
+                <p class="text-2xl text-slate-800 mb-3 text-center sm:text-3xl sm:text-left lg:hidden">Bozzmen1 BP</p>
+                <img src="img/boat.jpg" alt="boat" class="w-80 h-60 mb-5 mx-auto sm:float-left sm:mr-5 "/>
+                <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam obcaecati, fugit similique, veniam minus architecto, voluptates ipsa deserunt nesciunt laborum repellendus officia harum sed quam ad iste eveniet libero quasi tenetur eius sunt beatae? Unde quaerat ut sed eos dolor?</p>
+                <img src="img/aurora.jpg" alt="aurora" class="w-20 h-15 mt-5 cover object-bottom shadow-lg shadow-slate-500 hover:scale-110 hover:shadow-2xl transition invisible md:visible lg:w-35 lg:h-30" />
+            </div>
+        </section>
+        <section>
+            <h2 class="font-bold text-center text-3xl">Flex in gallery</h2>
+            <div class="container p-5 mx-auto sm:flex sm:flex-wrap sm:gap-6 sm:justify-evenly md:justify-around lg:justify-evenly">
+                <div class="mt-10 shadow-lg rounded-xl overflow-hidden sm:w-64 md:w-80 lg:w-72">
+                    <img src="img/aurora.jpg" alt="aurora" class="w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold">Lorem lorem and lorem</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, illum.</p>
+                    </div>
+                </div>
+                <div class="mt-10 shadow-lg rounded-xl overflow-hidden sm:w-64 md:w-80 lg:w-72">
+                    <img src="img/aurora.jpg" alt="aurora" class=" w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold">Lorem lorem and lorem</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, illum.</p>
+                    </div>
+                </div> 
+                <div class="mt-10 shadow-lg rounded-xl overflow-hidden sm:w-64 md:w-80 lg:w-72">
+                    <img src="img/aurora.jpg" alt="aurora" class="w-full">
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold">Lorem lorem and lorem</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima, illum.</p>
+                    </div>
+                </div> 
+            </div>
+        </section>
+            
     </body>
 </html>
