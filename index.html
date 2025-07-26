@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="">
+<html class="scroll-smooth">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -154,7 +154,7 @@
                     <p class="text-lg m-auto">❌</p>
                 </div>
             </div>
-            <div class="w-10 h-10 border-1 border-black bottom-5 right-1/2 fixed flex">
+            <div class="w-10 h-10 border-1 border-black bottom-5 right-1/2 fixed flex z-50">
                 <a href="#"class="text-2xl bg-green-500 m-auto">🔝</a>
             </div>
             <div class="container mx-auto border-1 border-pink-600 p-5 mt-20 columns-3">
@@ -202,6 +202,63 @@
                 </div> 
             </div>
         </section>
-            
+        <section class="mt-90 min-h-screen">
+            <h2 class="text-3xl text-center mb-2 font-medium">Cool Grid (in BP: base-md-lg)</h2>
+            <p class="text-center text-sm mb-10">Check Image 4, 9 and 10 on those BP to exp some funny effects</p>
+
+            <div class="p-2 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4">
+                <h2 class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] text-lg font-semibold md:col-start-2 md:row-start-2 md:flex md:p-3"><span class="self-end">Han</span></h2>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] text-lg font-semibold md:col-start-4 md:row-start-2 md:flex md:p-3"><span class="self-center">SOme txt HErE</span>
+                        <div class="w-30 h-24 bg-[url('img/han-so-hee.jpeg')] bg-contain bg-no-repeat bg-center"></div>
+                </div>
+
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat1.jpg')] bg-cover bg-center w-full h-full group-hover:scale-125 group-hover:rotate-12 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] md:col-start-3 lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat2.jpg')] bg-cover bg-top w-full h-full group-hover:scale-125 group-hover:rotate-12 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat3.jpg')] bg-cover bg-center w-full h-full group-hover:scale-125 group-hover:rotate-12 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat4.jpg')] bg-cover bg-center w-full h-full 
+                    group-hover:scale-190 group-hover:rotate-720 group-hover:translate-x-20 group-hover:translate-y-20 
+                    md:group-hover:translate-x-12 
+                    lg:group-hover:translate-x-20 
+                    transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat5.jpg')] bg-cover bg-center w-full h-full group-hover:scale-125 group-hover:rotate-12 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] md:col-start-2 lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat6.jpg')] bg-cover bg-center w-full h-full group-hover:scale-125 group-hover:rotate-12 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] md:col-start-4 lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat7.jpg')] bg-cover bg-top w-full h-full group-hover:rotate-12  group-hover:scale-125 transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat8.jpg')] bg-cover bg-center w-full h-full 
+                    group-hover:scale-125 group-hover:rotate-12 
+                    transition duration-500"></div>
+                </div>
+                <div class=" aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] md:col-start-3 lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat9.jpg')] bg-cover bg-top w-full h-full group-hover:bg-[url('img/cat12.jpg')] group-hover:scale-150 
+                    md:group-hover:scale-175 md:group-hover:translate-y-20 md:group-hover:bg-[url('img/cat9.jpg')] 
+                    lg:group-hover:scale-150 lg:group-hover:translate-y-0 lg:group-hover:bg-[url('img/cat12.jpg')]
+                    transition duration-500 ease-in-out group">
+                        <p class="invisible pt-12 text-center group-hover:visible md:group-hover:invisible lg:invisible lg:group-hover:visible">U may not See Me..<br>Hisss!</p>
+                    </div>
+
+                </div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden md:aspect-[3/4] md:col-start-3 lg:aspect-[4/3] group hover:scale-95 transition duration-500">
+                    <div class="bg-[url('img/cat10.jpg')] bg-cover bg-top w-full h-full 
+                    group-hover:scale-400 group-hover:translate-y-15 
+                    md:bg-center md:group-hover:translate-y-70 
+                    lg:group-hover:scale-400 lg:group-hover:translate-y-15 lg:bg-top
+                    transition duration-500"></div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
